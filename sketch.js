@@ -18,7 +18,7 @@ function setup() {
   createCanvas(displayWidth, displayHeight);
   
   switchBtn = createButton('Switch');
-  switchBtn.position(displayWidth/2,10);
+  switchBtn.position(10,10);
   switchBtn.size(150,50);
   switchBtn.mouseReleased(switchCam);
   
