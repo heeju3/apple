@@ -18,7 +18,7 @@ function setup() {
   createCanvas(displayWidth, displayHeight);
   
   switchBtn = createButton('Switch');
-  switchBtn.position(width/2,10);
+  switchBtn.position(displayWidth/2,10);
   switchBtn.size(250,50);
   switchBtn.mouseReleased(switchCam);
   
@@ -85,15 +85,15 @@ function draw() {
   
   for (let i = 0; i < detectedObjects.length; i++) {
     let object = detectedObjects[i];
-    if(object.label == 'apple'){
-      stroke(0,255,0);
-      strokeWeight(4);
-      noFill();
-      rect(object.x, object.y, object.width, object.height);
-      noStroke();
-      fill(0,255,0);
-      textSize(24);
-      text(object.label, object.x + 10, object.y+24);
+      if(object.label == 'apple'){
+        stroke(0,255,0);
+        strokeWeight(4);
+        noFill();
+        rect(object.x, object.y, object.width, object.height);
+        noStroke();
+        fill(0,255,0);
+        textSize(24);
+        text(object.label, object.x + 10, object.y+24);
   }
 }
 
